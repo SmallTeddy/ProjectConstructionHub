@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { useRouter } from 'vue-router'
 import useUserStore from '@/store/modules/user'
+import ZButton from '@/components/Button/index'
 
 const router = useRouter()
 const userStore = useUserStore()
@@ -25,5 +26,10 @@ function getUserInfo(): void {
     <el-button @click="getUserInfo">
       get user info
     </el-button>
+    <el-button type="primary" @click="goRouter('/table')">
+      go table
+    </el-button>
+    <z-button type="blue" text="测试blue" :left="10"></z-button>
+    <z-button type="warn" text="测试warn" :left="10"></z-button>
   </div>
 </template>
